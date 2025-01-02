@@ -2,8 +2,8 @@
 
 ## Descrição
 Este repositóro é dedicado ao desenvolvimento da classe Carro, atividade do curso de Java: aplicando orientação a objetos. A proposta dessa atividade é iniciar o estudos em orientação a objetos,
-por meio da criação de uma classe Carro, com os atributos: modeloDoCarro, anoDoCarro e corDoCarro. Incialmente não houve o encapsulamento de atributos e nem de métodos. A ideia dessa atividade é 
-definir o conceito de classe e objeto.
+por meio da criação de uma classe Carro, com os atributos: modeloDoCarro, anoDoCarro e corDoCarro. Incialmente ela não houve o encapsulamento de atributos e nem de métodos. A ideia dessa atividade é 
+explicar o conceito de classe e objeto.
 
 ## Detalhes técnicos
 Para a realização dessas atividades foi utilizada a IDE Intellij. Não houve instalação de bibliotecas externas. A versão do Java utilizada nas atividades é: Java 21. 
@@ -32,5 +32,91 @@ Essas instalações, tanto do JDK quanto do JRE, são importantes porque incluem
 Crie uma classe Carro com atributos modelo, ano, cor e métodos para exibir a ficha técnica e calcular a idade do carro.
 
 ## Conteúdo estudado e aprendido com o desenvolvimento dessa atividade
-1. Programação Orientada a Objetos:é a representação do mundo real de forma abstrata tornando cada item (pessoa, carro, animal e etc)
-um objeto que contém características (atributos) e comportamentos (métodos) próprios.
+Em programação existe dois paradigmas: estrutural e orientado a objetos. A linguagem de programação que faz uso do paradigma estrutural desenvolvem em uma programação estruturada, com este paradigma temos as linguagens: C, Cobol, Pascal e Basic, por exemplo. Esse paradigma compreende que o programa deve seguir uma estrutura formada por:
+
+
+ - Sequências: são comandos escritos de forma sequencial para serem executados;
+ - Condições: sequências que só devem ser executada se uma condição for satisfeita;
+ - Repetições: sequências que devem ser executadas repetidamente até que uma condição seja satisfeita;
+
+
+Além disso em programação estruturada o programa é escrito em rotinas (funções) que recebem um bloco de instruções que contém uma ou todas as estruturas citadas acima. Essa rotinas podem ser quebradas em subrotinas. Essas subrotinas podem ser chamadas dentro de rotinas as quais se tornam responsáveis por executar todo o programa. Segue abaixo um exemplo do uso de programação estruurada usando a linguagem C:
+```
+// exemplo de programação estruturada usando a Linguagem C (sem uso de rotinas):
+
+#include <stdio.h>
+
+int main() {
+    // sequência de comandos
+    int dividendo, divisor;
+
+    printf("Digite o valor de dividendo: ");
+    scanf("%d", &dividendo);
+
+    printf("Digite o valor de divisor: ");
+    scanf("%d", &divisor);
+    
+    // estrutura de condição para verificar se dividendo é divisível por divisor
+    if (divisor == 0) {
+        printf("Divisão por zero não é permitida.\n");
+    } else {
+        if (dividendo % divisor == 0) {
+            printf("%d é divisível por %d.\n", dividendo, divisor);
+        } else {
+            printf("%d não é divisível por %d.\n", dividendo, divisor);
+        }
+    }
+
+    return 0;
+}
+```
+```
+// exemplo de programação estruturada usando a Linguagem C (com uso de rotinas):
+
+#include <stdio.h>
+
+// rotina (função) para verificar se dividendo é divisível por divisor
+void verificarDivisibilidade(int dividendo, int divisor) {
+    
+    // estrutura de condição para verificar se dividendo é divisível por divisor
+    if (divisor == 0) {
+        printf("Divisão por zero não é permitida.\n");
+    } else if (dividendo % divisor == 0) {
+        printf("%d é divisível por %d.\n", dividendo, divisor);
+    } else {
+        printf("%d não é divisível por %d.\n", dividendo, divisor);
+    }
+}
+
+int main() {
+
+    // sequência de comandos
+    int dividendo, divisor;
+
+    printf("Digite o valor de dividendo: ");
+    scanf("%d", &dividendo);
+
+    printf("Digite o valor de divisor: ");
+    scanf("%d", &divisor);
+
+    // chamada da rotina (função)
+    verificarDivisibilidade(dividendo, divisor);
+
+    return 0;
+}
+
+```
+O objetivo do paradigma orientado a objetos é aproximar as estruturas de um programa com as coisas do mundo real, além de fornecer uma maior proteção das variáveis utilizando o princípio de encapsulamento, isso não é visto e nem utilizado em programação estruturada, na verdade a programação estruturada se limita apenas a dizer se uma variável é vísivel ou não dentro de uma função. Além desse princípio existem outros que norteiam o paradigma de orientação a objetos. 
+
+Para aproximar as estruturas de um programa com as coisas do mundo real, a POO como é chamada a programação orientada a objetos, definiu o conceito de classe e de objeto. Sendo a classe responsável por comportar os atributos (características) e métodos (comportamentos) de um objeto, servindo posteriormente de molde para a criação de objetos os quais tem tais atributos e fazem uso de tais métodos que podem ou não alterar o seu estado inicial.
+
+Na atividade proposta criamos a classe Carro com os atributos: modelo, ano e cor. Essa classe podia se chamar Veículos por exemplo, e dessa classe podermos criar os objetos: carro e moto, por exemplo, uma vez que ambos possuem tais características. Também criamos os métodos: exibeFichaTécnica e calculaAIdadeDoCarro, ambos os métodos não alteram o estado do objeto. O método exibeFichaTécnica apenas apresenta informações do objeto, enquanto que calculaAIdadeDoCarro traz quantos anos o objeto possui, não alterando os atributos do objeto.
+
+Agora se fosse criado um método frear, esse sim alteraria o estado do objeto, uma vez que o mesmo estava em estado de movimentação, passa agora estar parado.
+
+Hoje em dia a maioria dos sistemas são desenvolvidos utilizando o paradigma de orientação a objetos, e a linguagem Java foi a pioneira no uso deste paradigma que revolucionou o reúso do código, a manutenção do código e a escrita do código. 
+
+*Não foi dado exemplo de programação orientada a objetos pela razão de haver o código da atividade sobre o assunto*
+
+## Referências usadas para a elaboração desta documentação
+**Artigo sobre Orientação a Objetos:** [Artigo da Alura](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos?srsltid=AfmBOoqZjVNt8nPtFAt0LFlfnhWQHJYHp9cwkibk2cTSP_QMhWmORV5I)
