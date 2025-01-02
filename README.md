@@ -29,5 +29,8 @@ Essas instalações, tanto do JDK quanto do JRE, são importantes porque incluem
 *Importante: ao instalar o Intellij escolha a edição community, ela é gratuita*
 
 ## Sobre a atividade
+Crie uma classe Carro com atributos modelo, ano, cor e métodos para exibir a ficha técnica e calcular a idade do carro.
 
 ## Conteúdo estudado e aprendido com o desenvolvimento dessa atividade
+1. Programação Orientada a Objetos:é a representação do mundo real de forma abstrata tornando cada item (pessoa, carro, animal e etc)
+um objeto que contém características (atributos) e comportamentos (métodos) próprios.
