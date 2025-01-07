@@ -118,5 +118,5 @@ Hoje em dia a maioria dos sistemas são desenvolvidos utilizando o paradigma de 
 
 *Não foi dado exemplo de programação orientada a objetos pela razão de haver o código da atividade sobre o assunto*
 
-## Referências usadas para a elaboração desta documentação
+## Para saber mais
 **Artigo sobre Orientação a Objetos:** [Artigo da Alura](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos?srsltid=AfmBOoqZjVNt8nPtFAt0LFlfnhWQHJYHp9cwkibk2cTSP_QMhWmORV5I)
